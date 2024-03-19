@@ -116,5 +116,15 @@
             </div>
           </div>
         </div>
+
+        <div class="impressum">
+            <p>Anfragen und Verbesserungsvorschläge bitte entweder an 
+                <a href="mailto:leoniekrenzer96@gmail.com">leoniekrenzer96@gmail.com</a>
+                , oder auf 
+                <a href="https://github.com/Leoniebra/PokemonStatQuiz" target="_blank" title="Github Project for this page">
+                    GitHub
+                </a>
+            </p>
+        </div>
     </body>
 </html>

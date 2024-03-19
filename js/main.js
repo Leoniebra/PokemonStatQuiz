@@ -165,6 +165,7 @@ function loadNewPokemon() {
 function prepareDocument() {
     loadNewPokemon();
     loadShowdownTiersIntoSelect();
+    addImpressumListener();
     
     document.querySelector('#giveUp').addEventListener('click', function() {        
         showModal(false);
@@ -207,4 +208,12 @@ function loadShowdownTiersIntoSelect() {
             tierSelect.innerHTML += "<option value=\"" + tier + "\">" + tier + "</option>";
         }
     }
+}
+
+function addImpressumListener() {
+    let impressum = document.querySelector('.impressum');
+
+    impressum.addEventListener('mouseenter', function () {
+        impressum.style.opacity = "100%";
+    })
 }
