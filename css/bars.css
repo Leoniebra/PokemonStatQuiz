@@ -1,0 +1,50 @@
+.stat-wrapper {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 500px;
+    height: 40px;
+    background-color: beige;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat {
+    background-color: blue;
+    height: 30px;
+    width: 100px;
+    position: absolute;
+    top: 5px;
+    left: 30px;
+}
+    
+.stat-label {
+    position: relative;
+    top: 10px
+}
+
+.stat-value {
+    position: relative;
+    left: 470px;
+    top: -10px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.solve-riddle {
+    margin: 4rem;
+}
+
+.btn {
+    margin: 2rem;
+}
+
+.d-none {
+    display: none;
+}
