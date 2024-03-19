@@ -121,7 +121,7 @@
             <p>Anfragen und Verbesserungsvorschläge bitte entweder an 
                 <a href="mailto:leoniekrenzer96@gmail.com">leoniekrenzer96@gmail.com</a>
                 , oder auf 
-                <a href="https://github.com/Leoniebra/PokemonStatQuiz" target="_blank" title="Github Project for this page">
+                <a href="https://github.com/Leoniebra/PokemonStatQuiz/issues/new" target="_blank" title="Github Project for this page">
                     GitHub
                 </a>
             </p>
