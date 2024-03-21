@@ -5,8 +5,10 @@
         <meta charset="utf-8">
         <script src="js/main.js" ></script>
         <script src="js/pokedex.js" ></script>
+        <script src="js/autocomplete.js"></script>
         <script src="bootstrap-5.0.2-dist/js/bootstrap.js"></script>
         <link rel="stylesheet" href="css/bars.css">
+        <link rel="stylesheet" href="css/autocomplete.css">
         <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
     </head>
     <body>
@@ -83,7 +85,10 @@
             <div class="row">    
                     <div class="solve-riddle m-2">
                         <label for="solution">Pokemon eingeben!</label>
-                        <input type="text" id="solution">
+                        <div class="autocomplete">
+                            <input type="text" id="solution">
+                            <div id="solution-choices" class="autocomplete-items"></div>
+                        </div>
                         <span class="input-error d-none">!</span>
                         <button type="submit" class="btn btn-danger">Abschicken</button>
                     </div>
@@ -116,6 +121,7 @@
             </div>
           </div>
         </div>
+        <?php ?>
 
         <div class="impressum">
             <p>Anfragen und Verbesserungsvorschläge bitte entweder an 

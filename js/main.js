@@ -122,7 +122,7 @@ function showModal(success) {
 
     document.body.style.backgroundColor = "yellow";
 
-    document.querySelector('.modal-body').innerHTML = "Du ja voll reingeschissen, das war doch offensichtlich " + document.querySelector('.solution').innerHTML;
+    document.querySelector('.modal-body').innerHTML = "Du hast ja voll reingeschissen, das war doch offensichtlich " + document.querySelector('.solution').innerHTML;
     document.querySelector('.modal-title').innerHTML = "Du Nasenbär";
 
     myModal.toggle();
