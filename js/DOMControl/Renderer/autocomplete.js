@@ -1,4 +1,6 @@
-document.addEventListener('DOMContentLoaded', function () {
+import { BattlePokedex } from "../../Pokedex/pokedex.js";
+
+function addAutocompleteToSelect() {
     let solutionInput = document.querySelector('#solution');
 
     let pokemonNames = [];
@@ -9,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     showChoices(solutionInput, pokemonNames);
 
-});
+}
 
 function showChoices(inputElement, choices) {
     inputElement.addEventListener('input', function(event) {
@@ -56,3 +58,4 @@ function showChoices(inputElement, choices) {
     })
 }
 
+export {addAutocompleteToSelect};
