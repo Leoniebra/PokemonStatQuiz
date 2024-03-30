@@ -13,43 +13,8 @@
         <div class="container"> 
             <h2>Pokemon Stat Quiz</h2>
             <div class="row p-2">
-                <div class="col-lg-6 col-12">
-                <div class="stat-wrapper">
-                    <div class="stat-label">HP</div><div class="stat js-hp"></div>
-                    <div class="stat-value">
-                        <span class="js-hp-value d-none"></span>
-                    </div>
-                </div>
-                <div class="stat-wrapper">
-                    <div class="stat-label">atk</div><div class="stat js-atk"></div>
-                    <div class="stat-value">
-                        <span class="js-atk-value d-none"></span>
-                    </div>
-                </div>
-                <div class="stat-wrapper">
-                    <div class="stat-label">def</div><div class="stat js-def"></div>
-                    <div class="stat-value">
-                    <span class="js-def-value d-none"></span>
-                    </div>
-                </div>
-                <div class="stat-wrapper">
-                    <div class="stat-label">spa</div><div class="stat js-spa"></div>
-                    <div class="stat-value">
-                    <span class="js-spa-value d-none"></span>
-                    </div>
-                </div>
-                <div class="stat-wrapper">
-                    <div class="stat-label">spd</div><div class="stat js-spd"></div>
-                    <div class="stat-value">
-                    <span class="js-spd-value d-none"></span>
-                    </div>
-                </div>
-                <div class="stat-wrapper">
-                    <div class="stat-label">spe</div><div class="stat js-spe"></div>
-                    <div class="stat-value">
-                    <span class="js-spe-value d-none"></span>
-                    </div>
-                </div>
+                <div class="col-lg-6 col-12 js-bars-container">
+        
                 </div>
                 <div class="col-12 col-lg-6 mt-2"> 
                     <div class="row"> 

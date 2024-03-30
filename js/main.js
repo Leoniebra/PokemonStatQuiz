@@ -2,6 +2,8 @@ import { getRandomPokemon } from "./Pokedex/pokemonUtility.js";
 import { setStats } from "./FormControl/bars.js"
 import { clear, prepareDocument } from "./DOMControl/basicDOMControl.js"
 import { addAutocompleteToSelect } from "./DOMControl/Renderer/autocomplete.js";
+import { renderBars } from "./DOMControl/Renderer/BarsRenderer.js";
+
 
 if ('complete' === document.readyState) {
     main();
@@ -10,6 +12,7 @@ if ('complete' === document.readyState) {
 }
 
 function main() {
+    renderBars();
     loadNewPokemon();
     prepareDocument();
     addAutocompleteToSelect();
