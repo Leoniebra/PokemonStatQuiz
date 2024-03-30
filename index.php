@@ -3,9 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
-        <script src="js/main.js" ></script>
-        <script src="js/pokedex.js" ></script>
-        <script src="js/autocomplete.js"></script>
+        <script src="js/main.js" type="module"></script>
         <script src="bootstrap-5.0.2-dist/js/bootstrap.js"></script>
         <link rel="stylesheet" href="css/bars.css">
         <link rel="stylesheet" href="css/autocomplete.css">
