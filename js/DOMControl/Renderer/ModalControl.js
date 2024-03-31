@@ -15,6 +15,7 @@ function showModal(success) {
         document.querySelector('.modal-title').innerHTML = "Gut gemacht!";
 
         myModal.toggle();
+        document.querySelector('.js-pokemon-cry').play();
 
         return;
     }

@@ -1,7 +1,7 @@
 import { BattlePokedex } from "./pokedex.js";
 
 function getRandomPokemon(tier) {
-    if ("Alle" == tier) {
+    if ("Alle" == tier || undefined == tier) {
         let number = Math.floor(Math.random() * 1025)
     
         for (let mon in BattlePokedex) {
@@ -55,4 +55,13 @@ function getMaxOfEachStat() {
     return max;
 }
 
-export {getRandomPokemon, getMaxOfEachStat};
+function insertCryIntoSuccessModal(pokemon) {
+    try {
+        document.querySelector('.js-pokemon-cry').src = "PokemonData/pokemonCries/" + pokemon.name.toLowerCase() + ".mp3";
+    } catch {
+        console.log(pokemon.name + ' seems to have no valid cry on showdown');
+    }
+
+} 
+
+export {getRandomPokemon, getMaxOfEachStat, insertCryIntoSuccessModal};

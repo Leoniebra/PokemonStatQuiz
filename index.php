@@ -11,8 +11,8 @@
     </head>
     <body>
         <div class="container"> 
-            <h2>Pokemon Stat Quiz</h2>
-            <div class="row p-2">
+            <h2>Pokemon Stat Quiz</h2>            
+              <div class="row p-2">
                 <div class="col-lg-6 col-12 js-bars-container">
         
                 </div>
@@ -84,7 +84,7 @@
             </div>
           </div>
         </div>
-        <?php ?>
+        <audio class="js-pokemon-cry d-none" src=""></audio>
 
         <div class="impressum">
             <p>Anfragen und Verbesserungsvorschläge bitte entweder an 
