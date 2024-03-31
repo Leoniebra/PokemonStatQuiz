@@ -56,8 +56,10 @@ function getMaxOfEachStat() {
 }
 
 function insertCryIntoSuccessModal(pokemon) {
+    // Delete all spaces from name 
+
     try {
-        document.querySelector('.js-pokemon-cry').src = "PokemonData/pokemonCries/" + pokemon.name.toLowerCase() + ".mp3";
+        document.querySelector('.js-pokemon-cry').src = "https://play.pokemonshowdown.com/audio/cries/" + pokemon.name.toLowerCase().replace(" ", "") + ".mp3";
     } catch {
         console.log(pokemon.name + ' seems to have no valid cry on showdown');
     }
