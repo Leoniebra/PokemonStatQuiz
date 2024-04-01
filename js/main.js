@@ -1,4 +1,4 @@
-import { getRandomPokemon, insertCryIntoSuccessModal } from "./Pokedex/pokemonUtility.js";
+import { getRandomPokemon, loadPokemonAssets } from "./Pokedex/pokemonUtility.js";
 import { setStats } from "./FormControl/bars.js"
 import { clear, prepareDocument } from "./DOMControl/basicDOMControl.js"
 import { addAutocompleteToSelect } from "./DOMControl/Renderer/autocomplete.js";
@@ -30,7 +30,7 @@ function loadNewPokemon() {
     let pokemon = getRandomPokemon();
 
     setStats(pokemon);
-    insertCryIntoSuccessModal(pokemon);
+    loadPokemonAssets(pokemon);
 
     // @TODO: Introduce abstraction layer for DOM Elements
     document.querySelector('.solution').innerHTML = pokemon.name;

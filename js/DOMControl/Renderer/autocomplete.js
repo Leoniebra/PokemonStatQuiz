@@ -55,6 +55,10 @@ function showChoices(inputElement, choices) {
 
             list.appendChild(option);
         }
+    });
+
+    inputElement.addEventListener('focusout', function () {
+        setTimeout(() => document.querySelector('#solution-choices').innerHTML = "", 100);       
     })
 }
 

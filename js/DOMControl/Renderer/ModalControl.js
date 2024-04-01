@@ -11,7 +11,7 @@ function showModal(success) {
 
     if (true == success) {
         document.body.style.backgroundColor = "green";
-        document.querySelector('.modal-body').innerHTML = "Du hast das Pokemon nur anhand der Stats erraten! Was für eine Jungfrauenenergie!";
+        document.querySelector('.modal-body-text').innerHTML = "Du hast das Pokemon nur anhand der Stats erraten! Was für eine Jungfrauenenergie!";
         document.querySelector('.modal-title').innerHTML = "Gut gemacht!";
 
         myModal.toggle();

@@ -66,4 +66,17 @@ function insertCryIntoSuccessModal(pokemon) {
 
 } 
 
-export {getRandomPokemon, getMaxOfEachStat, insertCryIntoSuccessModal};
+function loadSpriteIntoModal(pokemon) {
+    try {
+        document.querySelector('.moda-body-image img').src = "https://play.pokemonshowdown.com/sprites/gen5/" + pokemon.name.toLowerCase().replace(" ", "") + ".png";
+    } catch {
+        console.log(pokemon.name + ' seems to have no valid sprite on showdown');
+    }
+}
+
+function loadPokemonAssets(pokemon) {
+    insertCryIntoSuccessModal(pokemon);
+    loadSpriteIntoModal(pokemon);
+}
+
+export {getRandomPokemon, getMaxOfEachStat, loadPokemonAssets};
