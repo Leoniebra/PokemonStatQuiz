@@ -76,7 +76,12 @@
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel"></h5>
               </div>
-              <div class="modal-body">                
+              <div class="modal-body row">
+                <div class="modal-body-text col-md-9 col-12">
+                </div> 
+                <div class="modal-body-image col-md-3 col-12 d-flex justify-content-center">
+                    <img src="">
+                </div>                
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary reload" id="modalNew" data-bs-dismiss="modal">Neues Pokemon</button>

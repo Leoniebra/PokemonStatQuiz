@@ -13,7 +13,8 @@ function clear() {
 function prepareDocument() {
     loadShowdownTiersIntoSelect();
     addImpressumListener();
-    
+    addSubmitListener();
+
     document.querySelector('#giveUp').addEventListener('click', function() {        
         showModal(false);
     });
@@ -31,6 +32,14 @@ function prepareDocument() {
                 break;
             }
        }
+    });
+}
+
+function addSubmitListener() {
+    document.addEventListener('keydown', function(event) {
+        if ("Enter" === event.key ) { 
+            document.querySelector('button[type="submit"]').click();
+        }   
     });
 }
 

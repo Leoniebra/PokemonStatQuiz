@@ -56,12 +56,27 @@ function getMaxOfEachStat() {
 }
 
 function insertCryIntoSuccessModal(pokemon) {
+    // Delete all spaces from name 
+
     try {
-        document.querySelector('.js-pokemon-cry').src = "PokemonData/pokemonCries/" + pokemon.name.toLowerCase() + ".mp3";
+        document.querySelector('.js-pokemon-cry').src = "https://play.pokemonshowdown.com/audio/cries/" + pokemon.name.toLowerCase().replace(" ", "") + ".mp3";
     } catch {
         console.log(pokemon.name + ' seems to have no valid cry on showdown');
     }
 
 } 
 
-export {getRandomPokemon, getMaxOfEachStat, insertCryIntoSuccessModal};
+function loadSpriteIntoModal(pokemon) {
+    try {
+        document.querySelector('.modal-body-image img').src = "https://play.pokemonshowdown.com/sprites/gen5/" + pokemon.name.toLowerCase().replace(" ", "") + ".png";
+    } catch {
+        console.log(pokemon.name + ' seems to have no valid sprite on showdown');
+    }
+}
+
+function loadPokemonAssets(pokemon) {
+    insertCryIntoSuccessModal(pokemon);
+    loadSpriteIntoModal(pokemon);
+}
+
+export {getRandomPokemon, getMaxOfEachStat, loadPokemonAssets};

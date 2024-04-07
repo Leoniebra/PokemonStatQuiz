@@ -55,7 +55,17 @@ function showChoices(inputElement, choices) {
 
             list.appendChild(option);
         }
+    });
+
+    inputElement.addEventListener('focusout', function () {
+        setTimeout(() => document.querySelector('#solution-choices').innerHTML = "", 100);       
     })
+
+    document.addEventListener('keydown', function(event) {
+        if ("Enter" === event.key ) { 
+            document.querySelector('button[type="submit"]').click();
+        }   
+    });
 }
 
 export {addAutocompleteToSelect};
