@@ -7,7 +7,9 @@ function showResult() {
 }
 
 function showModal(success) {
-    var myModal = new bootstrap.Modal(document.getElementById('reloadModal'));
+    var myModal = new bootstrap.Modal(document.getElementById('reloadModal'), {
+        keyboard: false
+    });
 
     if (true == success) {
         document.body.style.backgroundColor = "green";
@@ -22,7 +24,7 @@ function showModal(success) {
 
     document.body.style.backgroundColor = "yellow";
 
-    document.querySelector('.modal-body').innerHTML = "Du hast ja voll reingeschissen, das war doch offensichtlich " + document.querySelector('.solution').innerHTML;
+    document.querySelector('.modal-body-text').innerHTML = "Du hast ja voll reingeschissen, das war doch offensichtlich " + document.querySelector('.solution').innerHTML;
     document.querySelector('.modal-title').innerHTML = "Du Nasenbär";
 
     myModal.toggle();
@@ -39,6 +41,5 @@ function showInputError() {
         document.querySelector('span.input-error').classList.add('d-none');
     }, 3000)
 }
-
 
 export {showInputError, showModal, showResult};
