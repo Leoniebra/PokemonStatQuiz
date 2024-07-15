@@ -3,6 +3,7 @@ import { setStats } from "./FormControl/bars.js"
 import { clear, prepareDocument } from "./DOMControl/basicDOMControl.js"
 import { addAutocompleteToSelect } from "./DOMControl/Renderer/autocomplete.js";
 import { renderBars } from "./DOMControl/Renderer/BarsRenderer.js";
+import Help from "./DOMControl/Renderer/help.js";
 
 
 if ('complete' === document.readyState) {
@@ -16,11 +17,12 @@ function main() {
     loadNewPokemon();
     prepareDocument();
     addAutocompleteToSelect();
-
         
     document.querySelectorAll('.reload').forEach(button => button.addEventListener('click', function() {
         loadNewPokemon();
     }));
+
+    Help.addHelpListener();
 }
 
 
@@ -31,12 +33,9 @@ function loadNewPokemon() {
 
     setStats(pokemon);
     loadPokemonAssets(pokemon);
-
-    // @TODO: Introduce abstraction layer for DOM Elements
+    
     document.querySelector('.solution').innerHTML = pokemon.name;
-    document.querySelector('.ability1').innerHTML = pokemon.abilities[0];
-    document.querySelector('.ability2').innerHTML = pokemon.abilities[1];
-    document.querySelector('.type1').innerHTML = pokemon.types[0];
-    document.querySelector('.type2').innerHTML = pokemon.types[1];
 
+    Help.setPokemon(pokemon);
+    Help.init();
 }
