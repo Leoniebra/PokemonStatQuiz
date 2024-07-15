@@ -6,6 +6,7 @@
         <script src="js/main.js" type="module"></script>
         <script src="bootstrap-5.0.2-dist/js/bootstrap.js"></script>
         <link rel="stylesheet" href="css/bars.css">
+        <link rel="stylesheet" href="css/help.css">
         <link rel="stylesheet" href="css/autocomplete.css">
         <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
     </head>
@@ -18,33 +19,35 @@
                 </div>
                 <div class="col-12 col-lg-6 mt-2"> 
                     <div class="row"> 
-                        <div class="col-6 align-items-center">
+                        <div class="col-6 align-items-center justif-content-center">
                             <button class="btn btn-primary js-show-values m-2" type="button">Werte anzeigen</button>
-                        </div>
-                        <div class="col-6 align-items-center">
                             <button class="btn btn-secondary js-show-help col-6 m-2" type="button">Hilfe</button>
+                        </div>
+                        <div class="col-6 help-container">                    
+                            <div class="help-row">
+                                <strong>Ability 1: </strong>
+                                <span class="ability1"></span>
+                            </div>
+                            <div class="help-row">
+                                <strong>Ability 2</strong>
+                                <span class="ability2"></span>
+                            </div>
+                            <div class="help-row">
+                                <strong>Hidden Ability: </strong>
+                                <span class="hidden-ability"></span>
+                            </div>
+                            <div class="help-row">
+                                <strong>Type 1: </strong>
+                                <span class="type1"></span>
+                            </div>
+                            <div class="help-row">
+                                <strong>Type 2: </strong>
+                                <span class="type2"></span>
+                            </div>
                         </div>
                     </div>
                 </div> 
             </div>
-            <div class="row ms-4">
-                    <div class="help-row d-none">
-                        <span>Ability 1</span>
-                        <span class="ability1"></span>
-                    </div>
-                    <div class="help-row d-none">
-                        <span>Ability 2</span>
-                        <span class="ability2"></span>
-                    </div>
-                    <div class="help-row d-none">
-                        <span>Type 1</span>
-                        <span class="type1"></span>
-                    </div>
-                    <div class="help-row d-none">
-                        <span>Type 2</span>
-                        <span class="type2"></span>
-                    </div>
-                </div>
             <div class="row">    
                     <div class="solve-riddle m-2">
                         <label for="solution">Pokemon eingeben!</label>
@@ -69,6 +72,16 @@
             </div>
         </div>
 
+        <div class="impressum m-2">
+            <p>Anfragen und Verbesserungsvorschläge bitte entweder an 
+                <a href="mailto:leoniekrenzer96@gmail.com">leoniekrenzer96@gmail.com</a>
+                , oder auf 
+                <a href="https://github.com/Leoniebra/PokemonStatQuiz/issues/new" target="_blank" title="Github Project for this page">
+                    GitHub
+                </a>
+            </p>
+        </div>
+
         <!-- Modal -->
         <div class="modal fade" id="reloadModal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -85,15 +98,5 @@
           </div>
         </div>
         <?php ?>
-
-        <div class="impressum">
-            <p>Anfragen und Verbesserungsvorschläge bitte entweder an 
-                <a href="mailto:leoniekrenzer96@gmail.com">leoniekrenzer96@gmail.com</a>
-                , oder auf 
-                <a href="https://github.com/Leoniebra/PokemonStatQuiz/issues/new" target="_blank" title="Github Project for this page">
-                    GitHub
-                </a>
-            </p>
-        </div>
     </body>
 </html>
