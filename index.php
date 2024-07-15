@@ -71,6 +71,8 @@
                         <div class="col-4 tier-col-2"></div>
                     </div>
                     </select>
+                    <button type="button" class="btn btn-light m-3" id="tiers-select-all">Alle auswählen</button>
+                    <button type="button" class="btn btn-light m-3" id="tiers-select-none">Alle abwählen</button>
                 </fieldset>
             </div>
         </div>

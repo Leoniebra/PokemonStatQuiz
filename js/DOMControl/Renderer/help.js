@@ -27,6 +27,8 @@ class Help {
     }
 
     init() {
+        this.#elements = [];
+
         for (let key in this.#abilities) {
             this.#fillValueAndAddElementToList(this.#abilities[key], this.#pokemon.abilities[key]);
         }
