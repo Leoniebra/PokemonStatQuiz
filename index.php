@@ -12,8 +12,8 @@
     </head>
     <body>
         <div class="container"> 
-            <h2>Pokemon Stat Quiz</h2>
-            <div class="row p-2">
+            <h2>Pokemon Stat Quiz</h2>            
+              <div class="row p-2">
                 <div class="col-lg-6 col-12 js-bars-container">
         
                 </div>
@@ -89,7 +89,12 @@
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel"></h5>
               </div>
-              <div class="modal-body">                
+              <div class="modal-body row">
+                <div class="modal-body-text col-md-9 col-12">
+                </div> 
+                <div class="modal-body-image col-md-3 col-12 d-flex justify-content-center">
+                    <img src="">
+                </div>                
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary reload" id="modalNew" data-bs-dismiss="modal">Neues Pokemon</button>
@@ -97,6 +102,16 @@
             </div>
           </div>
         </div>
-        <?php ?>
+        <audio class="js-pokemon-cry d-none" src=""></audio>
+
+        <div class="impressum">
+            <p>Anfragen und Verbesserungsvorschläge bitte entweder an 
+                <a href="mailto:leoniekrenzer96@gmail.com">leoniekrenzer96@gmail.com</a>
+                , oder auf 
+                <a href="https://github.com/Leoniebra/PokemonStatQuiz/issues/new" target="_blank" title="Github Project for this page">
+                    GitHub
+                </a>
+            </p>
+        </div>
     </body>
 </html>

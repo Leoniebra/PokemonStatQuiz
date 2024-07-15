@@ -1,4 +1,4 @@
-import { getRandomPokemon } from "./Pokedex/pokemonUtility.js";
+import { getRandomPokemon, loadPokemonAssets } from "./Pokedex/pokemonUtility.js";
 import { setStats } from "./FormControl/bars.js"
 import { clear, prepareDocument } from "./DOMControl/basicDOMControl.js"
 import { addAutocompleteToSelect } from "./DOMControl/Renderer/autocomplete.js";
@@ -34,7 +34,6 @@ function loadNewPokemon() {
 
     setStats(pokemon);
     loadPokemonAssets(pokemon);
-    console.log(pokemon);
 
     Help.setPokemon(pokemon);
     Help.init();

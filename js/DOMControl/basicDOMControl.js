@@ -11,6 +11,8 @@ function clear() {
 
 function prepareDocument() {
     loadShowdownTiersIntoSelect();
+    addImpressumListener();
+    addSubmitListener();
     
     document.querySelector('#giveUp').addEventListener('click', function() {        
         showModal(false);
@@ -19,6 +21,14 @@ function prepareDocument() {
     document.querySelector('button[type="submit"]').addEventListener('click', showResult);
     document.querySelector('.js-show-values').addEventListener('click', function() {
         document.querySelectorAll('span[class*="-value"]').forEach(el => el.classList.remove('d-none'));
+    });
+}
+
+function addSubmitListener() {
+    document.addEventListener('keydown', function(event) {
+        if ("Enter" === event.key ) { 
+            document.querySelector('button[type="submit"]').click();
+        }   
     });
 }
 
