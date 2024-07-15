@@ -17,7 +17,6 @@ function main() {
     loadNewPokemon();
     prepareDocument();
     addAutocompleteToSelect();
-
         
     document.querySelectorAll('.reload').forEach(button => button.addEventListener('click', function() {
         loadNewPokemon();
@@ -34,6 +33,8 @@ function loadNewPokemon() {
 
     setStats(pokemon);
     loadPokemonAssets(pokemon);
+    
+    document.querySelector('.solution').innerHTML = pokemon.name;
 
     Help.setPokemon(pokemon);
     Help.init();

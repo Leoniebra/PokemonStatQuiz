@@ -11,9 +11,8 @@ function clear() {
 
 function prepareDocument() {
     loadShowdownTiersIntoSelect();
-    addImpressumListener();
     addSubmitListener();
-    
+
     document.querySelector('#giveUp').addEventListener('click', function() {        
         showModal(false);
     });

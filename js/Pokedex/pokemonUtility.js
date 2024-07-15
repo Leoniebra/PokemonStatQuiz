@@ -1,7 +1,9 @@
 import { BattlePokedex } from "./pokedex.js";
 
-function getRandomPokemon(tier) {
-    if ("Alle" == tier || undefined == tier) {
+function getRandomPokemon() {
+    const activeTiers = findActiveTiers();
+
+    if ([0,19].includes(activeTiers.length)) {
         let number = Math.floor(Math.random() * 1025)
     
         for (let mon in BattlePokedex) {
@@ -17,7 +19,7 @@ function getRandomPokemon(tier) {
     let filteredDex = [];
 
     for (let mon in BattlePokedex) {
-        if (tier == BattlePokedex[mon].tier) {
+        if (activeTiers.includes(BattlePokedex[mon].tier)) {
              filteredDex.push(BattlePokedex[mon]);
         }
     }
@@ -32,6 +34,20 @@ function getRandomPokemon(tier) {
             return filteredDex[mon];
         }
     }
+}
+
+function findActiveTiers() {
+    let tiers = [];
+
+    document.querySelectorAll('.tiers-select-area input').forEach((checkbox) => {
+        if (true !== checkbox.checked) {
+            return;
+        }
+
+        tiers.push(checkbox.name);
+    });
+
+    return tiers;
 }
 
 function getMaxOfEachStat() {
@@ -59,7 +75,7 @@ function insertCryIntoSuccessModal(pokemon) {
     // Delete all spaces from name 
 
     try {
-        document.querySelector('.js-pokemon-cry').src = "https://play.pokemonshowdown.com/audio/cries/" + pokemon.name.toLowerCase().replace(" ", "") + ".mp3";
+        document.querySelector('.js-pokemon-cry').src = "https://play.pokemonshowdown.com/audio/cries/" + cleanupName(pokemon.name) + ".mp3";
     } catch {
         console.log(pokemon.name + ' seems to have no valid cry on showdown');
     }
@@ -68,7 +84,7 @@ function insertCryIntoSuccessModal(pokemon) {
 
 function loadSpriteIntoModal(pokemon) {
     try {
-        document.querySelector('.modal-body-image img').src = "https://play.pokemonshowdown.com/sprites/gen5/" + pokemon.name.toLowerCase().replace(" ", "") + ".png";
+        document.querySelector('.modal-body-image img').src = "https://play.pokemonshowdown.com/sprites/gen5/" + cleanupName(pokemon.name) + ".png";
     } catch {
         console.log(pokemon.name + ' seems to have no valid sprite on showdown');
     }
@@ -77,6 +93,10 @@ function loadSpriteIntoModal(pokemon) {
 function loadPokemonAssets(pokemon) {
     insertCryIntoSuccessModal(pokemon);
     loadSpriteIntoModal(pokemon);
+}
+
+function cleanupName(name) {
+    return name.toLowerCase().replace(" ", "").replace("-", "").replace("é", "e");
 }
 
 export {getRandomPokemon, getMaxOfEachStat, loadPokemonAssets};

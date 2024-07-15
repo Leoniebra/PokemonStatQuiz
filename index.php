@@ -65,8 +65,11 @@
             <div class="filter-settings">
                 <fieldset>
                     <legend>Verfügbare Pokemon einschränken:</legend>
-                    <select class="form-select" id="tier">
-                        <option selected>Alle</option>
+                    <div class="tiers-select-area row">
+                        <div class="col-4 tier-col-0"></div>
+                        <div class="col-4 tier-col-1"></div>
+                        <div class="col-4 tier-col-2"></div>
+                    </div>
                     </select>
                 </fieldset>
             </div>
@@ -103,15 +106,5 @@
           </div>
         </div>
         <audio class="js-pokemon-cry d-none" src=""></audio>
-
-        <div class="impressum">
-            <p>Anfragen und Verbesserungsvorschläge bitte entweder an 
-                <a href="mailto:leoniekrenzer96@gmail.com">leoniekrenzer96@gmail.com</a>
-                , oder auf 
-                <a href="https://github.com/Leoniebra/PokemonStatQuiz/issues/new" target="_blank" title="Github Project for this page">
-                    GitHub
-                </a>
-            </p>
-        </div>
     </body>
 </html>
