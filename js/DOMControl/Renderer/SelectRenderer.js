@@ -14,13 +14,8 @@ function loadShowdownTiersIntoSelect() {
 
     let counter = 0;
 
-   
     for (let tier of tiers) {
         counter++;
-
-        if(0 === counter % 7) {
-        
-        }
 
         if (tier) {
             let htmlParts = [
