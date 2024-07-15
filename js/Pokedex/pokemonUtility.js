@@ -3,7 +3,7 @@ import { BattlePokedex } from "./pokedex.js";
 function getRandomPokemon() {
     const activeTiers = findActiveTiers();
 
-    if ([0,19].includes(activeTiers.length)) {
+    if ([0,19].includes(activeTiers.length) || activeTiers.includes("AG")) {
         let number = Math.floor(Math.random() * 1025)
     
         for (let mon in BattlePokedex) {
@@ -39,7 +39,7 @@ function getRandomPokemon() {
 function findActiveTiers() {
     let tiers = [];
 
-    document.querySelectorAll('.tiers-select-area input').forEach((checkbox) => {
+    document.querySelectorAll('.tiers-select-area input[id^=tier-checkbox-]').forEach((checkbox) => {
         if (true !== checkbox.checked) {
             return;
         }
@@ -96,7 +96,9 @@ function loadPokemonAssets(pokemon) {
 }
 
 function cleanupName(name) {
-    return name.toLowerCase().replace(" ", "").replace("-", "").replace("é", "e");
+    const regex = /[^a-zA-Z]/;
+    
+    return name.toLowerCase().replace(regex, "");
 }
 
 export {getRandomPokemon, getMaxOfEachStat, loadPokemonAssets};

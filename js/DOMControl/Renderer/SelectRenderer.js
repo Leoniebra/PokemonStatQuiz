@@ -36,6 +36,22 @@ function loadShowdownTiersIntoSelect() {
             tierSelect.querySelector('.tier-col-' + Math.floor((counter / 7)).toString()).innerHTML += htmlParts.join('');
         }
     }
+
+    attachListeners();
+}
+
+function attachListeners() {
+    document.querySelector('button#tiers-select-all').addEventListener('click', function() {
+        document.querySelectorAll('.tiers-select-area input[id^=tier-checkbox-]').forEach((checkbox) => {
+            checkbox.checked = true;
+        });
+    });
+
+    document.querySelector('button#tiers-select-none').addEventListener('click', function() {
+        document.querySelectorAll('.tiers-select-area input[id^=tier-checkbox-]').forEach((checkbox) => {
+            checkbox.checked = false;
+        });
+    });
 }
 
 export {loadShowdownTiersIntoSelect};
