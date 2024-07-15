@@ -96,7 +96,9 @@ function loadPokemonAssets(pokemon) {
 }
 
 function cleanupName(name) {
-    return name.toLowerCase().replace(" ", "").replace("-", "").replace("é", "e");
+    const regex = /[^a-zA-Z]/;
+    
+    return name.toLowerCase().replace(regex, "");
 }
 
 export {getRandomPokemon, getMaxOfEachStat, loadPokemonAssets};
